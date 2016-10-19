@@ -147,11 +147,11 @@ var WelcomePage = React.createClass({
 		).start();
 	},
 
-	//3.渲染函数 
+	//3.渲染函数
 	render:function(){
 		var img,text;
 		img = require('image!splash');
-		text = '撑起头顶的天';
+		text = '撑起头顶的天';
 
 		return (
 			<View style={styles.container}>

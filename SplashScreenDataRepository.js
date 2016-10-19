@@ -3,8 +3,14 @@ var React = require('react-native');
 var{
 	AsyncStorage,
 } = React;
+
+/**
+{"data":null,"datas":[{"action":"","imgHight":"","imgUrl":"http://image4.mall.icbc.com.cn/images/operationDefault/1475891210843.jpg",
+"imgWidth":"","properties":null,"seq":"","titleDesc":"闪屏广告","titleId":"0000002283","titleName":"闪屏广告-秋分"}],
+"isReview":"","message":"","status":"0","type":"datas"}
+**/
 //请求的json的url地址
-var API_SLIDE_URL = "http://m.mall.icbc.com.cn/mobile/indexSlide.jhtml";
+var API_SLIDE_URL = "http://m.mall.icbc.com.cn/mobile/indexFlashAd.jhtml";
 //数据缓存标志
 var KEY_SLIDE = '@Splash';
 
