@@ -116,10 +116,10 @@ Animated库就是用来创造流畅、强大、并且易于构建和维护的动
 var Animated = require('Animated');
 var WINDOW_WIDTH = Dimensions.get('window').width;
 var WINDOW_HEIGHT = Dimensions.get('window').height;
-var ShenDataRepository = require('./HomeDataRepository');
-var repository = new HomeDataRepository();
+var SplashScreenDataRepository = require('./SplashScreenDataRepository');
+var repository = new SplashScreenDataRepository();
 
-var ShenSplashScreen = React.createClass({
+var SplashScreen = React.createClass({
 	//定义fetchData方法，从网络或缓存中取数据
 	fetchData:function(){
 		//调用getCover方法获取数据
@@ -168,7 +168,7 @@ var ShenSplashScreen = React.createClass({
 			this.state.bounceValue,
 			{
 				toValue:1.2,
-				duration:5000,
+				duration:3000,
 			}
 		).start();
 	},
@@ -178,8 +178,9 @@ var ShenSplashScreen = React.createClass({
 		console.log("开始渲染函数 render 方法");
 		var img,text;
 		if(this.state.cover){
-			img = {uri: this.state.cover.img};
-			text = this.state.cover.text;
+			//img = {uri: this.state.cover.datas[0].imgUrl};
+			img = {uri:'http://img4.duitang.com/uploads/item/201509/30/20150930203120_cPNVa.thumb.700_0.jpeg'};
+			text = this.state.cover.datas[0].titleName;
 		}else{
 			img = require('image!splash');
 			text = '';
@@ -187,22 +188,20 @@ var ShenSplashScreen = React.createClass({
 
 		return (
 			<View style={styles.container}>
-			<Animated.Image
-			source={img}
-			style={{
-			flex: 1,
-			width: WINDOW_WIDTH,
-			height: 1,
-			transform: [
-				{scale: this.state.bounceValue},
-			]
-		}}/>
-
-		<Text style={styles.text}>
-			{text}
-		</Text>
-		<Image style={styles.logo} source={require('image!splash_logo')}/>
-	</View>
+					<Animated.Image
+					source={img}
+					style={{
+					flex: 1,
+					width: WINDOW_WIDTH,
+					height: WINDOW_HEIGHT,
+					transform: [
+						{scale: this.state.bounceValue},
+					]
+				}}/>
+				<Text style={styles.text}>
+					{text}
+				</Text>
+		</View>
 		);
 	}
 

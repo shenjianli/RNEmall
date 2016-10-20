@@ -21,7 +21,7 @@ Date.prototype.yyyymmdd = function(){
 };
 
 //单例对象保存
-function ShenDataRepository() {//Singleton pattern
+function HomeDataRepository() {//Singleton pattern
 	if (typeof HomeDataRepository.instance === 'object'){
 		return HomeDataRepository.instance;
 	}

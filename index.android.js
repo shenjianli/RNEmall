@@ -14,7 +14,7 @@ var {
 
 var TimerMixin = require('react-timer-mixin');
 
-//var ShenSplashScreen = require('./SplashScreen');
+var ShenSplashScreen = require('./SplashScreen');
 
 var WelcomePage = require('./WelcomePage')
 
@@ -39,14 +39,8 @@ var AwesomeProject = React.createClass({
   render: function() {
     if (this.state.splashed) {
       return (
-        <View
-          style={styles.container}
-        >
-        <Text>
-        	Home
-        </Text>
-        </View>
-      );
+        <ShenSplashScreen/>
+          );
     } else {
       return (
         <WelcomePage />
