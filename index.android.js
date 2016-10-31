@@ -16,7 +16,9 @@ var TimerMixin = require('react-timer-mixin');
 
 var ShenSplashScreen = require('./SplashScreen');
 
-var WelcomePage = require('./WelcomePage')
+var WelcomePage = require('./WelcomePage');
+
+var GuidePage = require('./GuidePage');
 
 var AwesomeProject = React.createClass({
   mixins: [TimerMixin],
@@ -39,7 +41,8 @@ var AwesomeProject = React.createClass({
   render: function() {
     if (this.state.splashed) {
       return (
-        <ShenSplashScreen/>
+        //<ShenSplashScreen/>
+        <GuidePage/>
           );
     } else {
       return (

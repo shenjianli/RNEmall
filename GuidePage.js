@@ -5,7 +5,7 @@
  * @date：2016-02-28
  */
 'use strict';
-import React, {
+var {
   AppRegistry,
   Component,
   StyleSheet,
@@ -17,11 +17,12 @@ import React, {
   ViewPagerAndroid,
   Image,
   View
-} from 'react-native';
+}=React;
+
 var _navigator;
 //var MainPage = require('./MainPage');
 import NButton from './app/commonview/NButton';
-class GuidePage  = React.createClass({
+va GuidePage  = React.createClass({
    /**
    *实例化时候调用，以后不再调用，初始化固定值，以后不再变，如静态的数据源。
    */
@@ -127,7 +128,7 @@ class GuidePage  = React.createClass({
 
 //React Native组件的生命周期，经历了Mount->Update->Unmount这三个大的过程，即从创建到销毁的过程
 
- const styles = StyleSheet.create({
+ var styles = StyleSheet.create({
    viewPager: {
      flex: 1,
      // justifyContent: 'center',
@@ -167,4 +168,4 @@ class GuidePage  = React.createClass({
   },
  });
 
-AppRegistry.registerComponent('health_manger', () => health_manger);
+module.exports = GuidePage;
